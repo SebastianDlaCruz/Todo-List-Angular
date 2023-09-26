@@ -1,0 +1,26 @@
+<div [class]="ModalStyle">
+  <form [class]="ModalForm" (submit)="onSubmit($event)">
+    <h2>Agrega una nueva tarea</h2>
+
+    <label for="title">Titulo de tarea</label>
+    <input type="text" name="title" id="title" [(ngModel)]="task.title" />
+
+    <label for="typeOfTask">Tipo de importancia</label>
+    <select name="typeOfTask" id="typeoftask" [(ngModel)]="task.important">
+      <option value="pendiente">pendiente</option>
+      <option value="vencido">vencido</option>
+      <option value="no relevante">no relevante</option>
+    </select>
+
+    <label for="date">Fecha de vencimiento</label>
+    <input type="date" name="date" id="date" [(ngModel)]="task.date">
+    <label for="description">descripción</label>
+    <textarea name="description" id="description" cols="30" rows="10" [(ngModel)]="task.description"></textarea>
+
+    <div class="container-buttons">
+      <button class="submit" (click)="onAddTask()">Agregar tarea</button>
+      <button class="cancelar" (click)="onClosetModal()">Cancelar</button>
+    </div>
+
+  </form>
+</div>

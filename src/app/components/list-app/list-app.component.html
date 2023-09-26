@@ -1,0 +1,7 @@
+<div>
+  <app-container-list [taskList]="getDataTodoList()" (customDeleteTask)="deleteTask($event)"
+    (customEditTask)="editTask($event)" />
+  <app-modal [open]="openModal" (customCloset)="onClosetModal()" (customAddTask)="onAddTask($event)"
+    [taskValue]="taskValue" />
+  <button class="button-list" (click)="onOpenModal()">+ Crear Tarea</button>
+</div>

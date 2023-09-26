@@ -1,0 +1,86 @@
+.modal{
+  position: fixed;
+  inset:0;
+  display: grid;
+  place-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: #0000007a;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease , visibility  1s ease;
+}
+
+.modal-form{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 300px;
+  width: 480px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fff;
+  transform: scale(0%);
+  transition: transform 1s ease;
+}
+
+.modal.is-active-modal{
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-form.is-active-modal-form{
+  transform: scale(100%);
+}
+
+
+input,textarea{
+  padding: 12px;
+  border: 1px solid #3030309a;
+  box-shadow: 0px 0px 0px #3030309a;
+  transition: box-shadow .3s cubic-bezier(.39,.58,.57,1);
+}
+
+input:focus,textarea:focus{
+  border: none;
+  box-shadow: 0px 12px 12px #3030309a;
+}
+
+select{
+  border: none;
+  padding: 12px;
+}
+
+textarea{
+  resize: none;
+}
+
+.container-buttons{
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+  gap: 14px;
+}
+
+.container-buttons button{
+  padding: 12px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
+.container-buttons .submit{
+  background-color: rgb(2, 121, 2);
+  transition: background-color 1s ease-in;
+}
+.container-buttons .submit:hover{
+  background-color: rgb(3, 70, 3);
+}
+
+.container-buttons .cancelar{
+  background-color: rgb(170, 3, 3);
+  transition: background-color 1s ease-in;
+}
+
+.container-buttons .cancelar:hover{
+  background-color: rgb(126, 2, 2);
+}
