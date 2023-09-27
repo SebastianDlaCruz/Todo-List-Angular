@@ -1,0 +1,8 @@
+<ng-container *ngIf="type === 'create' then addButton else editButton"></ng-container>
+
+<ng-template #addButton>
+  <button class="button" (click)="addTask()">Agregar tarea</button>
+</ng-template>
+<ng-template #editButton>
+  <button class="button" (click)="editTask()">Editar tarea</button>
+</ng-template>

@@ -3,7 +3,7 @@
     <header>
       <h2 class="list-title">{{task.title}}</h2>
       <div>
-        <p class="list-date">Fecha de vencimiento: {{task.date}}</p>
+        <p class="list-date">Fecha: {{task.date}}</p>
         <p class="list-description">Tarea: {{task.description}}</p>
       </div>
     </header>
@@ -11,11 +11,13 @@
       <app-importance [text]="task.important" />
     </footer>
     <div class="list-container-button">
+
       <button class="option-buttons edit-button" (click)="editTask(task.id)">editar</button>
       <button class="option-buttons delete-delete" (click)="deleteTask(task.id)">borrar</button>
     </div>
   </article>
 </section>
+
 
 <section class="container-list container-list-null" *ngIf="taskList.length === 0">
   <article>

@@ -3,22 +3,24 @@
     <h2>Agrega una nueva tarea</h2>
 
     <label for="title">Titulo de tarea</label>
-    <input type="text" name="title" id="title" [(ngModel)]="task.title" />
+    <input type="text" name="title" id="title" [(ngModel)]="task.title" required />
 
     <label for="typeOfTask">Tipo de importancia</label>
-    <select name="typeOfTask" id="typeoftask" [(ngModel)]="task.important">
-      <option value="pendiente">pendiente</option>
-      <option value="vencido">vencido</option>
-      <option value="no relevante">no relevante</option>
+    <select name="typeOfTask" id="typeoftask" [(ngModel)]="task.important" required>
+      <option value="Pendiente">Pendiente</option>
+      <option value="En Progreso">En Progreso</option>
+      <option value="Completada">Completada</option>
     </select>
 
-    <label for="date">Fecha de vencimiento</label>
-    <input type="date" name="date" id="date" [(ngModel)]="task.date">
+    <label for="date">Fecha</label>
+    <input type="date" name="date" id="date" [(ngModel)]="task.date" required>
+
     <label for="description">descripción</label>
-    <textarea name="description" id="description" cols="30" rows="10" [(ngModel)]="task.description"></textarea>
+    <textarea name="description" id="description" cols="30" rows="10" [(ngModel)]="task.description"
+      required></textarea>
 
     <div class="container-buttons">
-      <button class="submit" (click)="onAddTask()">Agregar tarea</button>
+      <app-action-button [type]="type" (customAddTask)="onAddTask()" (customEditTask)="onEdit()" />
       <button class="cancelar" (click)="onClosetModal()">Cancelar</button>
     </div>
 

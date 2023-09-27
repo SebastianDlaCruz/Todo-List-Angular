@@ -7,13 +7,15 @@ import { ContainerListComponent } from './components/container-list/container-li
 import { ImportanceComponent } from './components/importance/importance.component';
 import { ListAppComponent } from './components/list-app/list-app.component';
 import { ModalComponent } from './components/modal/modal.component';
+import { ActionButtonComponent } from './components/action-button/action-button.component';
 @NgModule({
   declarations: [
     AppComponent,
     ListAppComponent,
     ContainerListComponent,
     ModalComponent,
-    ImportanceComponent
+    ImportanceComponent,
+    ActionButtonComponent
   ],
   imports: [
     BrowserModule,

@@ -5,14 +5,14 @@
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.pendiente{
+.Completada{
   background-color: #0c9600;
 }
 
-.vencido{
+.Pendiente{
   background-color: #b30505;
 }
 
-.no_relevante{
+.En-Progreso{
   background-color: #ee8309;
 }

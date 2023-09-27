@@ -25,6 +25,7 @@ export class ListService {
 
   updateTask(id: string, newData: ListTaskModel) {
     this.listTask = this.listTask.map(item => item.id === id ? { ...item, ...newData } : item)
+    console.log(newData)
   }
 
   show(id: string) {

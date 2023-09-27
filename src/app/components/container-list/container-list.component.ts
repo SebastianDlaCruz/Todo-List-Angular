@@ -1,5 +1,8 @@
 import { Component, EventEmitter, Input, Output, } from '@angular/core';
 import { ListTaskModel } from '../list-app/list.model';
+
+
+
 @Component({
   selector: 'app-container-list',
   templateUrl: './container-list.component.html',
@@ -7,6 +10,7 @@ import { ListTaskModel } from '../list-app/list.model';
 })
 
 export class ContainerListComponent {
+  @Input('type') type!: string;
   @Input('taskList') taskList!: ListTaskModel[];
   @Output('customDeleteTask') customDeleteTask = new EventEmitter<string>()
   @Output('customEditTask') customEditTask = new EventEmitter<string>()

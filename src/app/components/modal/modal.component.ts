@@ -10,9 +10,12 @@ export class ModalComponent implements OnChanges {
 
   @Input('open') openModal!: boolean;
   @Input('taskValue') taskValue!: ListTaskModel;
+  @Input('type') type!: string;
 
   @Output('customCloset') customClosetModal = new EventEmitter<void>();
   @Output('customAddTask') customAddTask = new EventEmitter<ListTaskModel>();
+  @Output('customEditTask') customEditTask = new EventEmitter<string>();
+  @Output('customOnEditTask') customOnEditTask = new EventEmitter<ListTaskModel>();
 
 
   ModalStyle = 'modal';
@@ -55,7 +58,7 @@ export class ModalComponent implements OnChanges {
 
   onAddTask() {
     this.task['id'] = this.generateID();
-    const item = this.task
+    const item = this.task;
     this.customAddTask.emit(item);
     this.task = {
       id: '',
@@ -66,7 +69,13 @@ export class ModalComponent implements OnChanges {
     }
   }
 
+  onEditTask(id: string) {
+    this.customEditTask.emit(id);
+  }
 
+  onEdit() {
+    this.customOnEditTask.emit(this.task);
+  }
 
 }
 
