@@ -8,6 +8,8 @@ import { ImportanceComponent } from './components/importance/importance.componen
 import { ListAppComponent } from './components/list-app/list-app.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { ActionButtonComponent } from './components/action-button/action-button.component';
+import { HeaderComponent } from './components/header/header.component';
+import { CustomSelectComponent } from './components/custom-select/custom-select.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +17,9 @@ import { ActionButtonComponent } from './components/action-button/action-button.
     ContainerListComponent,
     ModalComponent,
     ImportanceComponent,
-    ActionButtonComponent
+    ActionButtonComponent,
+    HeaderComponent,
+    CustomSelectComponent
   ],
   imports: [
     BrowserModule,

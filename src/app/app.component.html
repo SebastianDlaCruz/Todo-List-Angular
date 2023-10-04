@@ -1,25 +1,11 @@
+<header class="header">
+  <h1>Lista de tareas</h1>
+</header>
+
 <div class="body">
-  <header class="header">
-    <h1>Lista de tareas</h1>
-    <nav>
-      <label for="typeOfTask">Tipo de importancia</label>
-      <select name="typeOfTask" id="typeoftask" required>
-        <option value="Pendiente">Pendiente</option>
-        <option value="En Progreso">En Progreso</option>
-        <option value="Completada">Completada</option>
-      </select>
-
-      <label for="search">Búsqueda de tareas</label>
-      <input type="text" name="search" id="search" placeholder="search">
-
-      <label for="date">Búsqueda por fecha</label>
-      <input type="date" name="date" id="date" placeholder="date">
-    </nav>
-  </header>
   <div class="container">
     <app-list-app />
   </div>
-
 </div>
 
 <router-outlet></router-outlet>

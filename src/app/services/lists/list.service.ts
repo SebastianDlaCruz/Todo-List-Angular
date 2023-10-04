@@ -1,11 +1,14 @@
 import { Injectable } from '@angular/core';
 import { ListTaskModel } from 'src/app/components/list-app/list.model';
 
+
 @Injectable({
   providedIn: 'root'
 })
 
 export class ListService {
+
+
   listTask: ListTaskModel[] = [];
 
   constructor() { }
@@ -32,4 +35,7 @@ export class ListService {
     const item = this.listTask.find(item => item.id === id)
     return item;
   }
+
+
+
 }

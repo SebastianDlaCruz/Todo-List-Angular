@@ -1,0 +1,13 @@
+.custom-select{
+  width: 200px;
+  height: 30px;
+}
+
+.container-select{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 200px;
+  height: 65px;
+
+}

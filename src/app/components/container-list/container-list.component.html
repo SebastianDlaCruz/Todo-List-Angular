@@ -1,4 +1,4 @@
-<section class="container-list" *ngIf="taskList.length > 0 ">
+<section class="container-list" *ngIf="taskList.length > 0 ||taskList.length  === null ">
   <article *ngFor="let task of taskList" class="list">
     <header>
       <h2 class="list-title">{{task.title}}</h2>
